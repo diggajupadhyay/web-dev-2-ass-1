@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: monospace, sans-serif;
+}
+
+/* Make website cover only 75% of the width */
+.content {
+    max-width: 75%;
+    margin: auto;
+    padding: 12px;
+}
+
+/* Use of Flexbox for proper alignment of the content */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style Navbar Link */
+nav a {
+    margin: 12px;
+    border-radius: 14px;
+    color: black;
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+/* When hover over the links apply following styles */
+nav a:hover {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+/* When on current page apply following styles */
+nav a.active {
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
