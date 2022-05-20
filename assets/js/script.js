@@ -14,12 +14,12 @@ function onblurName() {
 
 // Onsubmit event to submit the form
 function onsubmitForm() {
-    alert("Thank you for submitting your application.\n\nWe will contact you shortly.");
+    alert("Thank you. We are away right now. \n\nWe will contact you as soon as we see your query.");
 }
 
 // Property Page form Validation
 var form = document.getElementsByTagName('form')[0]; // Get the form element
-form.addEventListener('submit', function (e) { // e is the event
+form.addEventListener('submit', function (onsubmitForm) { // e is the event
     var name = document.getElementById('name').value; // get the value of the name input field
     var phone = document.getElementById('phone').value; // get the value of the phone input field
     var address = document.getElementById('address').value; // get the value of the address input field
@@ -54,9 +54,41 @@ form.addEventListener('submit', function (e) { // e is the event
         alert('Please enter a valid price.');
         e.preventDefault(); // prevent form from submitting
     }
-    // submit form reloads the website
-    else {
-        alert('Thank you for submitting the form.'); // alert user that form has been submitted
+});
+
+// Contact Page form validation
+var form = document.getElementsByTagName('form')[1]; // Get the form element
+form.addEventListener('submit', function (e) { // e is the event
+    var name = document.getElementById('name').value; // get the value of the name input field
+    var email = document.getElementById('email').value; // get the value of the email input field
+    var message = document.getElementById('message').value; // get the value of the message input field
+
+    // validate name
+    if (name == '') { // if the name is empty
+        alert('Please enter your name.');
+        e.preventDefault(); // prevent form from submitting
+    }
+
+    // validate email with regex
+    if (email == '') { // if the email is empty
+        alert('Please enter your email.');
+        e.preventDefault(); // prevent form from submitting
+    } else if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) { // email must be in the correct format
+        alert('Please enter a valid email.');
+        e.preventDefault(); // prevent form from submitting
+    }
+
+    // validate message
+    if (message == '') { // if the message is empty
+        alert('Please enter your message.');
+        e.preventDefault(); // prevent form from submitting
+    }
+
+    // check if the user has entered the correct number
+    var captcha = document.getElementById('math').value; // get the value of the captcha input field
+    if (captcha != '4') { // captcha must be 4
+        alert('You need to enter the correct number.');
+        e.preventDefault(); // prevent form from submitting
     }
 });
 
