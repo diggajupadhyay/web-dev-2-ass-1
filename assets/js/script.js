@@ -6,6 +6,17 @@
 //     alert("Sorry, you cannot visit the website unless you adhere to company's policy.");
 // }
 
+// onblur event to transform input to uppercase
+function onblurName() {
+    var name = document.getElementById("name");
+    name.value = name.value.toUpperCase();
+}
+
+// Onsubmit event to submit the form
+function onsubmitForm() {
+    alert("Thank you for submitting your application.\n\nWe will contact you shortly.");
+}
+
 // Property Page form Validation
 var form = document.getElementsByTagName('form')[0]; // Get the form element
 form.addEventListener('submit', function (e) { // e is the event
