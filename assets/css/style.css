@@ -72,6 +72,32 @@ nav a.active {
     color: rgb(255, 255, 255);
 }
 
+/* Property Form */
+.property-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Form Title */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Form input style */
+.form-group input {
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
 /* Footer Style */
 footer {
     text-align: center;
