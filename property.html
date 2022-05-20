@@ -18,7 +18,7 @@
         </nav>
         <!-- About Company -->
         <div class="about-company">
-            <h2>About Red Real Estate</h2>
+            <h2>View Property Listing</h2>
             <p>We are always happy providing the best customer service in the town. Currently there are no properties available. But,
                 you can fill out the form below with your desired property and we will get back to you as soon as possible. Thank you
                 for choosing us.
@@ -29,25 +29,25 @@
             <div class="form">
                 <h2>Application Form</h2>
                 <!-- Form validation in vanilla javascript -->
-                <form action="#" method="post" onsubmit="onsubmitForm()">
+                <form action="#" method="post" onsubmit="return onsubmitForm()">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <!-- Onfocus event handler to clear the placeholder / input field -->
-                        <input type="text" name="name" id="name" placeholder="Enter your name" onblur="onblurName()" onfocus="this.value=' '" required>
+                        <input type="text" name="name" id="name" placeholder="Enter your name" onblur="onblurName()" onfocus="this.value=' '" >
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
                         <!-- Onfocus event handler to clear the placeholder / input field -->
-                        <input type="text" name="phone" id="phone" placeholder="Enter your phone number" onfocus="this.value=' '" required>
+                        <input type="text" name="phone" id="phone" placeholder="Enter your phone number" onfocus="this.value=' '" >
                     </div>
                     <div class="form-group">
                         <label for="address">Address</label>
                         <!-- Onfocus event handler to clear the placeholder / input field -->
-                        <input type="text" name="address" id="address" placeholder="Enter your address" onfocus="this.value=' '" required>
+                        <input type="text" name="address" id="address" placeholder="Enter your address" onfocus="this.value=' '" >
                     </div>
                     <div class="form-group">
                         <label for="price">Price</label>
-                        <input type="text" name="price" id="price" placeholder="Enter desired price" onfocus="this.value=' '" required">
+                        <input type="text" name="price" id="price" placeholder="Enter desired price" onfocus="this.value=' '" ">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" style="background-color: red;color:white;">
