@@ -28,7 +28,7 @@
         <div class="contact-form">
             <div class="form">
                 <h2>Contact US</h2>
-                <form action="#" method="post">
+                <form action="#" method="post" onsubmit="onsubmitForm()">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <!-- Onfocus event handler to clear the placeholder / input field -->
@@ -46,6 +46,12 @@
                         <!-- Onfocus event handler to clear the placeholder / input field -->
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message"
                             onfocus="this.value=' '" required></textarea>
+                    </div>
+                    <!-- Basic math problem solving question for bot verification -->
+                    <div class="form-group">
+                        <label for="math">What is 2 + 2?</label>
+                        <input type="text" name="math" id="math" placeholder="Enter the correct answer"
+                            onfocus="this.value=' '" required>
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" style="background-color: red;color:white;">
