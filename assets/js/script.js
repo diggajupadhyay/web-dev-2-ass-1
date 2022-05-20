@@ -4,9 +4,12 @@ function onblurName() {
     name.value = name.value.toUpperCase();
 }
 
-// Onsubmit event to submit the form
+// Onsubmit event to submit the form and reload the window
 function onsubmitForm() {
     alert("Thank you. We are away right now. \n\nWe will contact you as soon as we see your query.");
+    setTimeout(function () {
+        window.location.reload();
+    },10);
 }
 
 // Property Page form Validation
@@ -50,7 +53,7 @@ form.addEventListener('submit', function (onsubmitForm) { // e is the event
 
 // Contact Page form validation
 var form = document.getElementsByTagName('form')[1]; // Get the form element
-form.addEventListener('submit', function (e) { // e is the event
+form.addEventListener('submit', function (onsubmitForm) { // e is the event
     var name = document.getElementById('name').value; // get the value of the name input field
     var email = document.getElementById('email').value; // get the value of the email input field
     var message = document.getElementById('message').value; // get the value of the message input field
